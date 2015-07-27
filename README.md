@@ -25,7 +25,7 @@ Open the `*.xcodeproj` file and navigate to the `FISAppDelegate.m` implementatio
   * `NSLog(@"%@", squawk);`
   * Run the program with `⌘``R`, this will print `squawk`.
 3. Now, set the `squawk` string variable equal to a call of the `uppercaseString` method on itself:
-  * `squawk = [squawk uppercaseString];`
+  * `squawk = [squawk capitalizedString];`
 4. Then add an `!` to `squawk` by setting it equal to a call of `stringByAppendingString` on itself:
   * `squawk = [squawk stringByAppendingString:@"!"];`
 5. Now, print `squawk` to the console using `NSLog()`:
