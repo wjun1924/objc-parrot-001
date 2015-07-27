@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1DD4B2A64554DBF7E75EDE75 /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC0CCF91E98173201EFCFB60 /* libPods-unit_tests.a */; };
 		45DB2D28C27BB74E7FA5B97E /* FISAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F927DDE00B36AA7CBF212C8 /* FISAppDelegate.m */; };
 		83335579EB0C3F2B69950D76 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12ABF9789DECDEFAA9F788DC /* Images.xcassets */; };
 		A376ECC17190793C7A3F9A33 /* LaunchScreen.xib in Sources */ = {isa = PBXBuildFile; fileRef = 6B4054F99C0AF7060910F0E8 /* LaunchScreen.xib */; };
@@ -29,18 +28,13 @@
 /* Begin PBXFileReference section */
 		036764AAA6875CBE80FEDF74 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		12ABF9789DECDEFAA9F788DC /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		392B81E85FA43A44141ACF2D /* Pods-unit_tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.release.xcconfig"; sourceTree = "<group>"; };
-		3CDD7065F8F0E78B86771F30 /* UnitTests-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UnitTests-Prefix.pch"; sourceTree = "<group>"; };
-		45499B9B0DD4F97C14E9A6D3 /* UnitTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		648A6D4D1CD44C759A1982DF /* Main.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		650FFE5029538A0120BB9BCF /* objc-parrot-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "objc-parrot-Info.plist"; sourceTree = "<group>"; };
 		6B4054F99C0AF7060910F0E8 /* LaunchScreen.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		6E1FF46C1629EE4124A2EEF3 /* main.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9F927DDE00B36AA7CBF212C8 /* FISAppDelegate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = FISAppDelegate.m; sourceTree = "<group>"; };
 		AC7977B08F4C6592E2867716 /* objc-parrot-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "objc-parrot-Prefix.pch"; sourceTree = "<group>"; };
-		CE5240789DAA90D1062EAEA6 /* Pods-unit_tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unit_tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-unit_tests/Pods-unit_tests.debug.xcconfig"; sourceTree = "<group>"; };
 		CECCB342424A8872C5373982 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DC0CCF91E98173201EFCFB60 /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22D0E92AA7F5F5800A2A457 /* objc-parrot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "objc-parrot.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8EA224E5D3336EBB2315CFF /* FISAppDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = FISAppDelegate.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,7 +52,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1DD4B2A64554DBF7E75EDE75 /* libPods-unit_tests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,15 +65,6 @@
 				CECCB342424A8872C5373982 /* UnitTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2CA37B5045C22D2B81958C0F /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				45499B9B0DD4F97C14E9A6D3 /* UnitTests-Info.plist */,
-				3CDD7065F8F0E78B86771F30 /* UnitTests-Prefix.pch */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		3F724734E553FE7D0C43F7BD /* Other-Sources */ = {
@@ -111,37 +95,17 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		7CC94EF2A40A8E6475CE4AA3 /* UnitTests */ = {
-			isa = PBXGroup;
-			children = (
-				2CA37B5045C22D2B81958C0F /* Resources */,
-				FEF1E9472E89A751067F814B /* Tests */,
-			);
-			path = UnitTests;
-			sourceTree = "<group>";
-		};
 		91A106444A432908B961FF59 = {
 			isa = PBXGroup;
 			children = (
 				F2233FEB60AC83F1753A8338 /* objc-parrot */,
-				7CC94EF2A40A8E6475CE4AA3 /* UnitTests */,
 				F32EE3D02E6ADA403A78274D /* Frameworks */,
 				1C1993B54363D0CB29D583D2 /* Products */,
-				A307CEBC5B715F30D019D4BC /* Pods */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
 			tabWidth = 4;
 			usesTabs = 0;
-		};
-		A307CEBC5B715F30D019D4BC /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				392B81E85FA43A44141ACF2D /* Pods-unit_tests.release.xcconfig */,
-				CE5240789DAA90D1062EAEA6 /* Pods-unit_tests.debug.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
 		};
 		F2233FEB60AC83F1753A8338 /* objc-parrot */ = {
 			isa = PBXGroup;
@@ -158,16 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				5F9C8DB2C3A9E5ADB3BFC2D4 /* iOS */,
-				DC0CCF91E98173201EFCFB60 /* libPods-unit_tests.a */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FEF1E9472E89A751067F814B /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,7 +429,6 @@
 		};
 		CCF89DCC8C0786BB3D243F65 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CE5240789DAA90D1062EAEA6 /* Pods-unit_tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/objc-parrot.app/objc-parrot";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -493,7 +448,6 @@
 		};
 		FD0C0388AD846C0C0ECE8E24 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 392B81E85FA43A44141ACF2D /* Pods-unit_tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/objc-parrot.app/objc-parrot";
 				FRAMEWORK_SEARCH_PATHS = (
