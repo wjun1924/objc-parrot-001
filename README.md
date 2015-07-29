@@ -11,7 +11,7 @@
 
 This code-along lab will walk you through creating, manipulating, and concatenating (combining) strings while printing them with `NSLog()`.
 
-Open the `*.xcodeproj` file and navigate to the `FISAppDelegate.m` implementation file. You'll enter all of your code in the `application:didFinishLaunchingWithOptions:` method body before the `return YES` line.
+Open the `objc-parrot.xcodeproj` file and navigate to the `FISAppDelegate.m` implementation file. You'll enter all of your code in the `application:didFinishLaunchingWithOptions:` method body before the `return YES` line.
 
 **Top-tip:** *If you wish to play around with Objective-C code snippets, this location in a blank program (or one of these early labs that we're supplying to you) is the best option for a "playground". Objective-C is not accurately supported by any REPL or by playgrounds like many other programming languages including Swift. It takes a full Xcode project to run code snippets.*
 
