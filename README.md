@@ -56,6 +56,8 @@ Squawk!
   * Run the program with `⌘``R`, this will print `Dead men`.
 5. Then, append `tell` and `noTales` to `pirateParrot` by calling the `appendFormat:` method on `pirateParrot` and supplying a formatted string that includes a space before `tell`, a space between `tell` and `noTales`, and an exclamation point (`!`) at the end:
   * `[pirateParrot appendFormat:@" %@ %@!", tell, noTales];`
+6. Now, print `pirateParrot` to the console using an `NSLog()`:
+  * `NSLog(@"%@", pirateParrot);`
   * Run the program with `⌘``R`, this will print `Dead men tell no tales!`.
 
 At the end of this code-along, your console should print out:
