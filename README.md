@@ -51,12 +51,13 @@ Squawk!
   * Run the program with `⌘``R`, this will print `Dead men tell no tales!`.
 3. Create a new `NSMutableString` variable called `pirateParrot` and set it equal to an `+alloc` `-init` of a new `NSMutableString`:
   * `NSMutableString *pirateParrot = [[NSMutableString alloc] init];`
-4. Now, append `deadMen` to `pirateParrot` by calling the `appendString:` method on `pirateParrot` with `deadMen` supplied as the argument:
+4. Now, append `deadMen` to `pirateParrot` by calling the `appendString:` method on `pirateParrot` with `deadMen` supplied as the argument, and then print `pirateParrot` to the console using an `NSLog()`:
   * `[pirateParrot appendString:deadMen];`
+  * `NSLog(@"%@", pirateParrot);`
   * Run the program with `⌘``R`, this will print `Dead men`.
 5. Then, append `tell` and `noTales` to `pirateParrot` by calling the `appendFormat:` method on `pirateParrot` and supplying a formatted string that includes a space before `tell`, a space between `tell` and `noTales`, and an exclamation point (`!`) at the end:
   * `[pirateParrot appendFormat:@" %@ %@!", tell, noTales];`
-6. Now, print `pirateParrot` to the console using an `NSLog()`:
+6. Now, print `pirateParrot` to the console again using another `NSLog()`:
   * `NSLog(@"%@", pirateParrot);`
   * Run the program with `⌘``R`, this will print `Dead men tell no tales!`.
 
@@ -67,6 +68,7 @@ Squawk!
 squawk
 Squawk!
 Dead men tell no tales!
+Dead men
 Dead men tell no tales!
 ```
 
@@ -97,6 +99,7 @@ Squawk!
 squawk
 Squawk!
 Dead men tell no tales!
+Dead men
 Dead men tell no tales!
 look at me i'm molting
 LOOK AT ME I'M MOLTING!
