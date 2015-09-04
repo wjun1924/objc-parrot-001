@@ -3,9 +3,12 @@
 ## Objectives
 
 1. Create variables.
-2. Call methods to manipulate strings.
-3. Concatenate strings with methods on `NSString` and `NSMutableString`.
-3. Print to the console with `NSLog()` supplied with interpolated strings.
+2. Use `NSLog()` to print a formatted string to the console.
+3. Change the case of a string with the `uppercaseString` method.
+3. Copy a string with the `stringWithString:` method.
+4. Concatenate strings with the `stringByAppendingString:` method.
+5. Concatenate an interpolated string with the `stringByAppendingFormat:` method.
+6. Create a new interpolated string with the `stringWithFormat:` method.
 
 ## Instructions
 
@@ -17,93 +20,180 @@ Open the `objc-parrot.xcodeproj` file and navigate to the `FISAppDelegate.m` imp
 
 #### Code-Along I: "Squawk!"
 
+##### A. `NSLog()` and the String Literal
 1. Print the string `@"Squawk!"` to the console by placing it directly inside an `NSLog()`:
   * `NSLog(@"Squawk!");`  
   * Run the program with `⌘``R`, this will print `Squawk!`.
-2. Create an `NSString` variable called `squawk` and set it equal to a string literal `@"squawk"` in all lowercase, then submit it to an `NSLog()` as format argument:
+2. Print the string `@"Squawk!"` by submitting it to an `NSLog()` as an argument for a format string with one specifier:
+  * `NSLog(@"%@", @"Squawk!");` 
+  *  Run the program with `⌘``R`, this will print another `Squawk!`.
+3. Copy the line above, but move the exclamation point (`!`)  from the argument string into the format string:
+  * `NSLog(@"%@!", @"Squawk");`
+  *  Run the program with `⌘``R`, this will print a third `Squawk!`.
+4. Copy the line above, but add a call of the `uppercaseString` method on the argument string `@"Squawk"` so the returned (uppercased) string is interpolated into the `NSLog()`'s format string:
+  * `NSLog(@"%@!", [@"Squawk" uppercaseString]);`
+  *  Run the program with `⌘``R`, this will print `SQUAWK!`.
+
+##### B. `NSString` Variable
+1. Create an `NSString` variable called `squawk` and set it equal to a string literal `@"squawk"` in all lowercase, then submit it to an `NSLog()` as format argument:
   * `NSString *squawk = @"squawk";`
   * `NSLog(@"%@", squawk);`
   * Run the program with `⌘``R`, this will print `squawk`.
-3. Now, set the `squawk` string variable equal to a call of the `uppercaseString` method on itself:
+2. Now, set the `squawk` string variable equal to a call of the `uppercaseString` method on itself, and print it again:
   * `squawk = [squawk capitalizedString];`
-4. Then add an `!` to `squawk` by setting it equal to a call of `stringByAppendingString` on itself:
-  * `squawk = [squawk stringByAppendingString:@"!"];`
-5. Now, print `squawk` to the console using `NSLog()`:
   * `NSLog(@"%@", squawk);`
-  * Run the program with `⌘``R`, this will print `Squawk!`.
+  * Run the program with `⌘``R`, this will print `SQUAWK`.
+3. Now, add an `!` to `squawk` by setting it equal to a call of `stringByAppendingString:` on itself, the print it again:
+  * `squawk = [squawk stringByAppendingString:@"!"];`
+  * `NSLog(@"%@", squawk);`
+  * Run the program with `⌘``R`, this will print `SQUAWK!`.
 
-At the end of this code-along your console should print out:
+At the end of this section your console should print out:
 
 ```
 Squawk!
+Squawk!
+Squawk!
+SQUAWK!
 squawk
-Squawk!
+SQUAWK
+SQUAWK!
 ```
 
-#### Code-Along II: "Dead men tell no tales!"
+#### Code-Along II: "Wind in yer sails!"
 
-1. Create three `NSString` variables; `deadMen`, `tell`, and `noTales`; and set them equal to, respectively, `@"Dead men"`, `@"tell"`, and `@"no tales"`:
-  * `NSString *deadMen = @"Dead men";`
-  * `NSString *tell = @"tell";`
-  * `NSString *noTales = @"no tales";`
-2. Use the formatting ability of `NSLog()` to print these three string concatenated into a regular sentence, with a space between each format specifier and an exclamation point (`!`) at the end:
-  * `NSLog(@"%@ %@ %@!", deadMen, tell, noTales);`
-  * Run the program with `⌘``R`, this will print `Dead men tell no tales!`.
-3. Create a new `NSMutableString` variable called `pirateParrot` and set it equal to an `+alloc` `-init` of a new `NSMutableString`:
-  * `NSMutableString *pirateParrot = [[NSMutableString alloc] init];`
-4. Now, append `deadMen` to `pirateParrot` by calling the `appendString:` method on `pirateParrot` with `deadMen` supplied as the argument, and then print `pirateParrot` to the console using an `NSLog()`:
-  * `[pirateParrot appendString:deadMen];`
-  * `NSLog(@"%@", pirateParrot);`
-  * Run the program with `⌘``R`, this will print `Dead men`.
-5. Then, append `tell` and `noTales` to `pirateParrot` by calling the `appendFormat:` method on `pirateParrot` and supplying a formatted string that includes a space before `tell`, a space between `tell` and `noTales`, and an exclamation point (`!`) at the end:
-  * `[pirateParrot appendFormat:@" %@ %@!", tell, noTales];`
-6. Now, print `pirateParrot` to the console again using another `NSLog()`:
-  * `NSLog(@"%@", pirateParrot);`
-  * Run the program with `⌘``R`, this will print `Dead men tell no tales!`.
+##### A. Interpolate multiple strings into an `NSLog()`
+1. Create four `NSString` variables; `wind`, `inString`, `yer`, and `sails`; and set them equal to, respectively, `@"Wind"`, `@"in"`, `@"yer"`, and `@"sails"`:
+  * `NSString *wind = @"Wind";`
+  * `NSString *inString = @"in";`
+  * `NSString *yer = @"yer";`
+  * `NSString *sails = @"sails";`
+2. Print the four strings using a format string with four specifiers separated by a space, and ending with an exclamation point (`!`):
+  * `NSLog(@"%@ %@ %@ %@!", wind, inString, yer, sails);`
+  * Run the program with `⌘``R`, this will print `Wind in yer sails!`.
 
-At the end of this code-along, your console should print out:
+##### B. Interpolate multiple strings into a string variable
+1. Create a new `NSString` variable called `windInYerSails` and use it capture the return of calling `stringWithFormat:` on `NSString`. Submit to the method call a format string and format arguments identical to the `NSLog()` above:
+  * `NSString *windInYerSails = [NSString stringWithFormat:@"%@ %@ %@ %@!", wind, inString, yer, sails];`
+2. Print `windInYerSails` to the console:
+  * `NSLog(@"%@", windInYerSails);`
+  * Run the program with `⌘``R`, this will print another `Wind in yer sails!`.
+
+##### C. Build a string by concatenating substrings
+1. Print the `wind` string by itself:
+  * `NSLog(@"%@", wind);`
+  * Run the program with `⌘``R`, this will print `Wind`.
+2. Reuse `windInYerSails` to capture a call of the `stringWithString:` method on `NSString` with `wind` supplied as the argument string, the print `windInYerSails`:
+  * `windInYerSails = [NSString stringWithString:wind];`
+  * `NSLog(@"%@", windInYerSails);`
+  * Run the program with `⌘``R`, this will print another `Wind`.
+3. Call the `stringByAppendingString:` method on `windInYerSails` with a string literal containing a space (`@" "`) as the argument:
+  * `windInYerSails = [windInYerSails stringByAppendingString:@" "];`
+4. Call the `stringByAppendingString:` method on `windInYerSails` a second time but with `inString` submitted as the argument, then print `windInYerSails`:
+  * `windInYerSails = [windInYerSails stringByAppendingString:inString];`
+  * `NSLog(@"%@", windInYerSails);`
+  * Run the program with `⌘``R`, this will print `Wind in`.
+5. Call the `stringByAppendingFormat:` method on `windInYerSails` with a format string containing a space and one format specifier and the `yer` string as the format argument, then print `windInYerSails`:
+  * `windInYerSails = [windInYerSails stringByAppendingFormat:@" %@", yer];`
+  * `NSLog(@"%@", windInYerSails);`
+  * Run the program with `⌘``R`, this will print `Wind in yer`.
+6. Call the `stringByAppendingFormat:` method on `windInYerSails` again but now with a format string containing a space, one format specifier, and an exclamation point (`!`) and the `sails` string as the format argument, then print `windInYerSails` again:
+  * `windInYerSails = [windInYerSails stringByAppendingFormat:@" %@!", sails];`
+  * `NSLog(@"%@", windInYerSails);`
+  * Run the program with `⌘``R`, this will print `Wind in yer sails!`.
+
+At the end of this section your console should also print:
 
 ```
-Squawk!
-squawk
-Squawk!
-Dead men tell no tales!
-Dead men
-Dead men tell no tales!
+Wind in yer sails!
+Wind in yer sails!
+Wind
+Wind
+Wind in
+Wind in yer
+Wind in yer sails!
 ```
+*Mostly we figure that means "yes".*
 
 #### Code-Along III: [Iago][iago] Is Molting
 
 [iago]: https://en.wikipedia.org/wiki/Iago_(Disney_character)
 
-1. Create two new `NSString` variables called `iagoLook` and `iagoMolting` and respectively set them equal to the lowercase strings `@"look at me"` and `@"i'm molting"`:
-  * `NSString *iagoLook = @"look at me";`
-  * `NSString *iagoMolting = @"i'm molting";`
-2. Print a concatenation of the strings using an `NSLog()`:
-  * `NSLog(@"%@ %@", iagoLook, iagoMolting);`
+##### A.
+1. Create five new `NSString` variables; `look`, `at`, `me`, `im`, and `molting`; and set them equal to, respectively; `@"look"`, `@"at"`, `@"me"`, `@"i'm"`, and `@"molting"`.
+  * `NSString *look = @"look";`
+  * `NSString *at = @"at";`
+  * `NSString *me = @"me";`
+  * `NSString *im = @"i'm";`
+  * `NSString *molting = @"molting";`
+2. Now print the five strings using an `NSLog()` with no characters other than the five required format specifiers:
+  * `NSLog(@"%@%@%@%@%@", look, at, me, im, molting);`
+  * Run the program with `⌘``R`, this will print `lookatmei'mmolting`.
+3. Now print the five strings again but insert a space between each specifier:
+  * `NSLog(@"%@%@%@%@%@", look, at, me, im, molting);`
   * Run the program with `⌘``R`, this will print `look at me i'm molting`.
-3. Make the strings uppercase by setting the strings equal to a call of the `uppercaseString` method to themselves, then `NSLog()` the strings again like above:
-  * `iagoLook = [iagoLook uppercaseString];`
-  * `iagoMolting = [iagoMolting uppercaseString];`
-  * `NSLog(@"%@ %@", iagoLook, iagoMolting);`
-  * Run the program with `⌘``R`, this will print `LOOK AT ME I'M MOLTING`.
-3. Create a new `NSString` variable called `iagoShout` and set it equal a call of `NSString`'s `stringWithFormat:` method supplied with a format string with two object format specifiers separated by a space and ending with an `!` ("exclamation point"), and the arguments `iagoLook` and `iagoMolting`, then print `iagoShout` using an `NSLog()`:
-  * `NSString *iagoShout = [NSString stringWithFormat:@"%@ %@!", iagoLook, iagoMolting];`
+4. Now print the five strings again but with a comma (`,`) after the third format specifier and an exclamation point (`!`) after the fifth format specifier:
+  * `NSLog(@"%@ %@ %@, %@ %@!", look, at, me, im, molting);`
+  * Run the program with `⌘``R`, this will print `look at me, i'm molting!`.
+5. Lastly, print the five strings again, but call the `uppercaseString` method on each of them within the `NSLog()` itself:
+   * `NSLog(@"%@ %@ %@, %@ %@!", [look uppercaseString], [at uppercaseString], [me uppercaseString], [im uppercaseString], [molting uppercaseString]);`
+  * Run the program with `⌘``R`, this will print `LOOK AT ME, I'M MOLTING!`.
+
+##### B.
+1. Create a new `NSString` variable called `lookAt` and use it capture the return of calling the `stringByAppendingFormat:` method on the `look` string with a format string that has one space and one format specifier and the `at` string as the format argument, then print `lookAt`:
+  * `NSString *lookAt = [look stringByAppendingFormat:@" %@", at];`
+  * `NSLog(@"%@", lookAt);`
+  * Run the program with `⌘``R`, this will print `look at`.
+2. Create a new `NSString` variable called `lookAtMe` and use to capture the return of calling the `stringByAppendingFormat:` method on the `lookAt` string with a format string that has one space and one format specifier and the `me` string as the format argument, then print `lookAtMe`:
+  * `NSString *lookAtMe = [lookAt stringByAppendingFormat:@" %@", me];`
+  * `NSLog(@"%@", lookAtMe);`
+  * Run the program with `⌘``R`, this will print `look at me`.
+3. Use `lookAtMe` to capture the return of calling `uppercaseString` on `lookAtMe` (itself), then print `lookAtMe`:
+  * `lookAtMe = [lookAtMe uppercaseString];`
+  * `NSLog(@"%@", lookAtMe);`
+  * Run the program with `⌘``R`, this will print `LOOK AT ME`.
+4. Create a new `NSString` variable called `imMolting` and set it a call on `NSString` of the `stringWithFormat:` method supplied with a format string with two format specifiers separated by a space and the `im` string and `molting` strings as the format arguments, then print `imMolting`:
+  * `NSString *imMolting = [NSString stringWithFormat:@"%@ %@", im, molting];`
+  * `NSLog(@"%@", imMolting);`
+  * Run the program with `⌘``R`, this will print `i'm molting`.
+5. Use `imMolting` to capture the return of calling `uppercaseString` on `imMolting` (itself), then print `imMolting`:
+  * `imMolting = [imMolting uppercaseString];`
+  * `NSLog(@"%@", imMolting);`
+  * Run the program with `⌘``R`, this will print `I'M MOLTING`.
+6. Create a new `NSString` variable called `lookAtMeImMolting` and use to capture the return of calling `stringByAppendingFormat:` on `lookAtMe`. Supply the format argument with a format string containing a comma (`,`), a space, one format specifier, and an exclamation point (`!`) and `imMolting` as the format argument, the print `lookAtMeImMolting`:
+  * `NSString *lookAtMeImMolting = [lookAtMe stringByAppendingFormat:@", %@!", imMolting];`
+  * `NSLog(@"%@", lookAtMeImMolting);`
+  * Run the program with `⌘``R`, this will print `LOOK AT ME, I'M MOLTING!`.
+
+##### C.
+1. Create a new `NSString` variable called `iagoShout` and set it equal to a call on `NSString` of the `stringWithFormat:` method with a format string with five format specifiers matching the last `NSLog()` from part A, and the five word strings as the format arguments:
+  * `NSString *iagoShout = [NSString stringWithFormat:@"%@ %@ %@, %@ %@!", look, at, me, im, molting];`
   * `NSLog(@"%@", iagoShout);`
-  * Run the program with `⌘``R`, this will print `LOOK AT ME I'M MOLTING!`.
+  * Run the program with `⌘``R`, this will print `look at me, i'm molting!`.
+2. Now, print a call of `uppercaseString` on `iagoShout`:
+  * `NSLog(@"%@", [iagoShout uppercaseString]);`
+  * Run the program with `⌘``R`, this will print `LOOK AT ME, I'M MOLTING!`.
+3. Use `iagoShout` to capture the return of calling `uppercaseString` on `iagoShout` (itself), then print `iagoShout`:
+  * `iagoShout = [iagoShout uppercaseString];`
+  * `NSLog(@"%@", iagoShout);`
+  * Run the program with `⌘``R`, this will print another `LOOK AT ME, I'M MOLTING!`.
 
 At the end of this code-along, your console should print out:
 
 ```
-Squawk!
-squawk
-Squawk!
-Dead men tell no tales!
-Dead men
-Dead men tell no tales!
+lookatmei'mmolting
 look at me i'm molting
-LOOK AT ME I'M MOLTING!
-LOOK AT ME I'M MOLTING!
+look at me, i'm molting!
+LOOK AT ME, I'M MOLTING!
+look at
+look at me
+LOOK AT ME
+i'm molting
+I'M MOLTING
+LOOK AT ME, I'M MOLTING!
+look at me, i'm molting!
+LOOK AT ME, I'M MOLTING!
+LOOK AT ME, I'M MOLTING!
 ```
 
 
