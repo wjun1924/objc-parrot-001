@@ -40,7 +40,7 @@ Open the `objc-parrot.xcodeproj` file and navigate to the `FISAppDelegate.m` imp
   * `NSLog(@"%@", squawk);`
   * Run the program with `⌘``R`, this will print `squawk`.
 2. Now, set the `squawk` string variable equal to a call of the `uppercaseString` method on itself, and print it again:
-  * `squawk = [squawk capitalizedString];`
+  * `squawk = [squawk uppercaseString];`
   * `NSLog(@"%@", squawk);`
   * Run the program with `⌘``R`, this will print `SQUAWK`.
 3. Now, add an `!` to `squawk` by setting it equal to a call of `stringByAppendingString:` on itself, the print it again:
