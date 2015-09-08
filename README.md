@@ -130,7 +130,7 @@ Wind in yer sails!
   * `NSLog(@"%@%@%@%@%@", look, at, me, im, molting);`
   * Run the program with `⌘``R`, this will print `lookatmei'mmolting`.
 3. Now print the five strings again but insert a space between each specifier:
-  * `NSLog(@"%@%@%@%@%@", look, at, me, im, molting);`
+  * `NSLog(@"%@ %@ %@ %@ %@", look, at, me, im, molting);`
   * Run the program with `⌘``R`, this will print `look at me i'm molting`.
 4. Now print the five strings again but with a comma (`,`) after the third format specifier and an exclamation point (`!`) after the fifth format specifier:
   * `NSLog(@"%@ %@ %@, %@ %@!", look, at, me, im, molting);`
