@@ -1,17 +1,6 @@
-//
 //  FISAppDelegate.m
-//  objc-parrot
-//
-//  Created by iOS Staff on 7/27/15
-//  Copyright (c) 2015 The Flatiron School. All rights reserved.
-//
 
 #import "FISAppDelegate.h"
-
-@interface FISAppDelegate ()
-
-@end
-
 
 @implementation FISAppDelegate
 
@@ -24,7 +13,8 @@
      
      */
     
-    return YES; // Don't alter this line.
-}
+    // Do not alter
+    return YES;  //
+}   ///////////////
 
 @end
