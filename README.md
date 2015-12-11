@@ -89,6 +89,7 @@ SQUAWK!
   * Run the program with `⌘``R`, this will print another `Wind`.
 3. Call the `stringByAppendingString:` method on `windInYerSails` with a string literal containing a space (`@" "`) as the argument:
   * `windInYerSails = [windInYerSails stringByAppendingString:@" "];`
+	* `NSLog(@"%@", windInYerSails);`
 4. Call the `stringByAppendingString:` method on `windInYerSails` a second time but with `inString` submitted as the argument, then print `windInYerSails`:
   * `windInYerSails = [windInYerSails stringByAppendingString:inString];`
   * `NSLog(@"%@", windInYerSails);`
