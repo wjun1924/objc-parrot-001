@@ -200,4 +200,4 @@ LOOK AT ME, I'M MOLTING!
 
 
 
-<a href='https://learn.co/lessons/objc-parrot' data-visibility='hidden'>View this lesson on Learn.co</a>
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot' title='Code-Along: Parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
