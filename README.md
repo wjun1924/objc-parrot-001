@@ -73,7 +73,7 @@ SQUAWK!
   * Run the program with `⌘``R`, this will print `Wind in yer sails!`.
 
 ##### B. Interpolate multiple strings into a string variable
-1. Create a new `NSString` variable called `windInYerSails` and use it capture the return of calling `stringWithFormat:` on `NSString`. Submit to the method call a format string and format arguments identical to the `NSLog()` above:
+1. Create a new `NSString` variable called `windInYerSails` and use it to capture the return of calling `stringWithFormat:` on `NSString`. Submit to the method call a format string and format arguments identical to the `NSLog()` above:
   * `NSString *windInYerSails = [NSString stringWithFormat:@"%@ %@ %@ %@!", wind, inString, yer, sails];`
 2. Print `windInYerSails` to the console:
   * `NSLog(@"%@", windInYerSails);`
@@ -201,3 +201,5 @@ LOOK AT ME, I'M MOLTING!
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot' title='Code-Along: Parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
