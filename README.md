@@ -141,7 +141,7 @@ Wind in yer sails!
   * Run the program with `⌘``R`, this will print `LOOK AT ME, I'M MOLTING!`.
 
 ##### B.
-1. Create a new `NSString` variable called `lookAt` and use it capture the return of calling the `stringByAppendingFormat:` method on the `look` string with a format string that has one space and one format specifier and the `at` string as the format argument, then print `lookAt`:
+1. Create a new `NSString` variable called `lookAt` and use it to capture the return of calling the `stringByAppendingFormat:` method on the `look` string with a format string that has one space and one format specifier and the `at` string as the format argument, then print `lookAt`:
   * `NSString *lookAt = [look stringByAppendingFormat:@" %@", at];`
   * `NSLog(@"%@", lookAt);`
   * Run the program with `⌘``R`, this will print `look at`.
@@ -203,3 +203,5 @@ LOOK AT ME, I'M MOLTING!
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot' title='Code-Along: Parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/objc-parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/objc-parrot'>Code-Along: Parrot</a> on Learn.co and start learning to code for free.</p>
